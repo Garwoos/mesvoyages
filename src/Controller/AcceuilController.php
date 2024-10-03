@@ -2,11 +2,12 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class AcceuilController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController {
+class AcceuilController extends AbstractController {
     public function index() : Response  {
-        return new response('hello world');
+        return $this ->render("pages\acceuil.html.twig");  
         
     }
 }
